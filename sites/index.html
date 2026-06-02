@@ -3,7 +3,141 @@
   <!-- Welcome to YJM! -->
   <head>
     <title>YellowJacketMod - Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href-="Glow-Y.png">
     <link rel="melemenimom" href="Text.mllm">
-  </head>
+    <style>
+    /* Reset default margins and paddings */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Navbar container */
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #ffdf00;
+        padding: 0.5rem 1rem;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Logo */
+    .navbar .logo {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Navigation links */
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Search bar */
+    .search-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-container input[type="text"] {
+        padding: 0.4rem;
+        border: none;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+    }
+
+    .search-container button {
+        padding: 0.4rem 0.6rem;
+        border: none;
+        background-color: #e69500;
+        color: white;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+
+    .search-container button:hover {
+        background-color: #cc8400;
+    }
+
+    /* Responsive menu for small screens */
+    @media (max-width: 768px) {
+        .navbar ul {
+            display: none;
+            flex-direction: column;
+            background-color: #ffab19;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            padding: 1rem;
+        }
+
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .menu-toggle {
+            display: block;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: white;
+        }
+    }
+
+    /* Hide menu toggle on large screens */
+    .menu-toggle {
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <a href="#" class="logo">Scratch</a>
+
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+
+    <ul id="nav-links">
+        <li><a href="#">Create</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Ideas</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button>🔍</button>
+    </div>
+</nav>
+
+<script>
+    // Toggle menu for mobile view
+    function toggleMenu() {
+        document.getElementById("nav-links").classList.toggle("show");
+    }
+</script>
+<text>Welcome to YellowJacketMod!</text>
+</body>
 </html>
