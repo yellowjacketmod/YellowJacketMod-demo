@@ -1,0 +1,9 @@
+// .yjm files are YellowJacketMod files.
+<sprites>
+Sprite1
+</sprites>
+<script sprite="Sprite1>
+when flag clicked
+say "hello! example";
+open in new tab "https://example.com";
+</script>
