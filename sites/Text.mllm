@@ -1,0 +1,6 @@
+element name <text>
+function () {
+element allowslash="true" inputavaiable="true"
+type="text"
+(PY)print("{input}")(PY/)
+}
